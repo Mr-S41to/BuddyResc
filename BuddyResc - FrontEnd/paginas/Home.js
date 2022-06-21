@@ -1,12 +1,47 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { View, SafeAreaView, Text, Image, TouchableOpacity } from 'react-native';
 
-function Home() {
+export default function Home(){
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
-    </View>
+    <SafeAreaView>
+      <View>
+        <View>
+          <TouchableOpacity
+          >
+            <Image
+              style={globalStyles.inputImage}
+              source={require("../../assets/icone-maps.png")}
+            />
+            <Text>Adotar</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+          >
+            <Image
+              style={globalStyles.inputImage}
+              source={require("../../assets/icone-maps.png")}
+            />
+            <Text>Colocar para Adoção</Text>
+          </TouchableOpacity>
+        </View>
+        <View>
+          <TouchableOpacity
+          >
+            <Image
+              style={globalStyles.inputImage}
+              source={require("../../assets/icone-maps.png")}
+            />
+            <Text>Campanhas</Text>
+          </TouchableOpacity
+          >
+          <TouchableOpacity>
+            <Image
+              style={globalStyles.inputImage}
+              source={require("../../assets/icone-maps.png")}
+            />
+            <Text>Informações</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    </SafeAreaView>
   );
 }
