@@ -18,7 +18,7 @@ export default class Home extends Component {
     }
   }
 
-  loadAnalysis = () => {
+  loadPets = () => {
     try {
       fetch(this.state.url)
         .then(res => res.json())
@@ -41,7 +41,7 @@ export default class Home extends Component {
 
 
   componentDidMount() {
-    this.loadAnalysis();
+    this.loadPets();
   }
 
 
