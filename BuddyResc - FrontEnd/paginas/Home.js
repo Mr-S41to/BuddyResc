@@ -3,7 +3,7 @@ import { View, SafeAreaView, Text, Image, TouchableOpacity } from 'react-native'
 
 import { globalStyles } from '../styles/Global';
 
-export default function Home(){
+export default function Home({navigation}){
   return (
     <SafeAreaView>
       <View>
