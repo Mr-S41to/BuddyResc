@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { View, SafeAreaView, Text, Image, TouchableOpacity } from 'react-native';
 
+import { globalStyles } from '../styles/Global';
+
 export default function Home(){
   return (
     <SafeAreaView>
@@ -10,7 +12,7 @@ export default function Home(){
           >
             <Image
               style={globalStyles.inputImage}
-              source={require("../../assets/icone-maps.png")}
+              source={require("../assets/cat.png")}
             />
             <Text>Adotar</Text>
           </TouchableOpacity>
@@ -18,7 +20,7 @@ export default function Home(){
           >
             <Image
               style={globalStyles.inputImage}
-              source={require("../../assets/icone-maps.png")}
+              source={require("../assets/kitten.png")}
             />
             <Text>Colocar para Adoção</Text>
           </TouchableOpacity>
@@ -28,7 +30,7 @@ export default function Home(){
           >
             <Image
               style={globalStyles.inputImage}
-              source={require("../../assets/icone-maps.png")}
+              source={require("../assets/license.png")}
             />
             <Text>Campanhas</Text>
           </TouchableOpacity
@@ -36,7 +38,7 @@ export default function Home(){
           <TouchableOpacity>
             <Image
               style={globalStyles.inputImage}
-              source={require("../../assets/icone-maps.png")}
+              source={require("../assets/owner.png")}
             />
             <Text>Informações</Text>
           </TouchableOpacity>
