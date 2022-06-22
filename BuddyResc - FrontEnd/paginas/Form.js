@@ -18,6 +18,8 @@ export default class Home extends Component {
     }
   }
 
+    //Get the Pets from api
+  
   loadPets = () => {
     try {
       fetch(this.state.url)
@@ -44,18 +46,13 @@ export default class Home extends Component {
     this.loadPets();
   }
 
+  //Case for the list empty
 
   ListEmptyView() {
 
     return (
       <View style={globalStyles.MainContainer}>
-        <Image
-          source={require('../../../assets/Fundo.png')}
-          style={{ width: 300, height: 380, top: 0, right: 0, bottom: 0, left: 0 }}
-          resizeMode='stretch'
-        >
-        </Image>
-        <Text style={{ textAlign: 'center', fontSize: 24, fontWeight: 'bold', position:'absolute'}}> Não há nenhuma {'\n'}análise registrada</Text>
+        <Text style={{ textAlign: 'center', fontSize: 24, fontWeight: 'bold', position:'absolute'}}> Não há nenhum {'\n'}pet registrado</Text>
       </View>
 
     );
@@ -68,41 +65,22 @@ export default class Home extends Component {
 
         <StatusBar barStyle='light-content' />
 
-        <LinearGradient
-          colors={['#48A151', '#F2F8F3', 'transparent']}>
-          <View>
-
             {/* **********FlatList********* */}
 
             <FlatList
               style={{
                 backgroundColor: "white",
-                top: 38,
+                top: 36,
                 width: '90%',
-                height: '87%',
+                height: 260,
                 alignSelf: 'center',
-                borderRadius: 5,
+                borderRadius: 32,
                 marginLeft:10,
                 marginRight:10
               }}
 
               data={this.state.data}
               nestedScrollEnabled={true}
-              ListHeaderComponent={() =>
-
-                <View
-                  style={{ alignItems: 'center', top: 24.11, paddingBottom: 44, }}
-                >
-                  <MaterialIcons name="history" size={26} color="black" />
-                  <Text
-                    style={{
-                      fontSize: 18,
-                      fontWeight: 'bold',
-                    }}
-                  > Histórico das Análises </Text>
-
-                </View>
-              }
 
               renderItem={({ item }) => (
                 <View>
@@ -127,8 +105,6 @@ export default class Home extends Component {
               ListEmptyComponent={this.ListEmptyView()}
 
             />
-          </View>
-        </LinearGradient>
 
       </SafeAreaView>
     );
