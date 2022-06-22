@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Home from "./paginas/Home";
 import AdicionarPets from "./paginas/AddPet";
+import List from './paginas/List';
 
 
 const Stack = createNativeStackNavigator();
@@ -14,8 +15,8 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="AddPets" component={AdicionarPets} />
-        
+        <Stack.Screen name="AdiciorPets" component={AdicionarPets} />
+        <Stack.Screen name="AdotarPets" component={List} />
       </Stack.Navigator>
     </NavigationContainer>
   );
