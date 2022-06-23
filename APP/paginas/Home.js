@@ -5,46 +5,62 @@ import { globalStyles } from '../styles/Global';
 
 export default function Home({navigation}){
   return (
-    <SafeAreaView>
-      <View>
-        <View>
+      
+    <View style={globalStyles.container}>
+      <SafeAreaView>
+        <View style={globalStyles.dadosView}>
           <TouchableOpacity
-          onPress={() => console.log(navigation.navigate("AdotarPets"))}
+            style={globalStyles.cardHome}
+            onPress={() => console.log(navigation.navigate("AdotarPets"))}
           >
             <Image
               style={globalStyles.inputImage}
-              source={require("../assets/cat.png")}
+              source={require("../assets/owner.png")}
             />
-            <Text>Adotar</Text>
+            <Text 
+              style={globalStyles.titleHome}
+            > Adotar </Text>
           </TouchableOpacity>
           <TouchableOpacity
+              style={globalStyles.cardHome}
+              onPress={() => console.log(navigation.navigate("AdotarPets"))}
           >
             <Image
               style={globalStyles.inputImage}
               source={require("../assets/kitten.png")}
             />
-            <Text>Colocar para Adoção</Text>
+            <Text
+              style={globalStyles.titleHome}
+            >Colocar para Adoção </Text>
           </TouchableOpacity>
         </View>
-        <View>
+        <View style={globalStyles.dadosView}>
           <TouchableOpacity
+              style={globalStyles.cardHome}
+              onPress={() => console.log(navigation.navigate("AdotarPets"))}
+          >
+            <Image
+              style={globalStyles.inputImage}
+              source={require("../assets/cat.png")}
+            />
+            <Text
+              style={globalStyles.titleHome}
+            >Campanhas</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={globalStyles.cardHome}
+            onPress={() => console.log(navigation.navigate("AdotarPets"))}
           >
             <Image
               style={globalStyles.inputImage}
               source={require("../assets/license.png")}
             />
-            <Text>Campanhas</Text>
-          </TouchableOpacity
-          >
-          <TouchableOpacity>
-            <Image
-              style={globalStyles.inputImage}
-              source={require("../assets/owner.png")}
-            />
-            <Text>Informações</Text>
+            <Text
+              style={globalStyles.titleHome}
+            >Informações</Text>
           </TouchableOpacity>
         </View>
-      </View>
-    </SafeAreaView>
+      </SafeAreaView>
+    </View>
   );
 }
