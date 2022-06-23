@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import { View, FlatList, Image, StatusBar, ImageBackground } from 'react-native';
+import { View, FlatList, Image, StatusBar, Text } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { LinearGradient } from 'expo-linear-gradient';
-import { Text } from 'react-native-paper';
-import { MaterialIcons } from '@expo/vector-icons';
 
 import { globalStyles } from '../styles/Global';
 
@@ -30,6 +27,7 @@ export default class List extends Component {
             this.setState({
               data: res
             })
+            console.log(this.state.data);
           } else {
             this.setState({
               data: null
@@ -86,20 +84,17 @@ export default class List extends Component {
               <View style={globalStyles.line}>
                 <View style={globalStyles.box}>
                   <Text style={globalStyles.text}>Nome</Text>
-                  <Text style={globalStyles.info}>{item.pet.name}</Text>
+                  <Text style={globalStyles.info}>{item.name}</Text>
                   <Text style={globalStyles.text}>Idade</Text>
-                  <Text style={globalStyles.info}>{item.pet.age}</Text>
+                  <Text style={globalStyles.info}>{item.age}</Text>
                   <Text style={globalStyles.text}>Sexo</Text>
-                  <Text style={globalStyles.info}>{item.pet.sex}</Text>
-                  <Image
-                    source={require(item.images)}
-                  />
+                  <Text style={globalStyles.info}>{item.sex}</Text>
                 </View>
               </View>
             </View>
 
           )}
-          keyExtractor={item => item.pet.id}
+          keyExtractor={item => item.id}
 
           ListEmptyComponent={this.ListEmptyView()}
 

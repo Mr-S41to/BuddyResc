@@ -9,6 +9,7 @@ export default function Home({navigation}){
       <View>
         <View>
           <TouchableOpacity
+          onPress={() => console.log(navigation.navigate("AdotarPets"))}
           >
             <Image
               style={globalStyles.inputImage}
