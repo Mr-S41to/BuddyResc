@@ -13,7 +13,6 @@ export default function AdicionarPets({ navigation }) {
     const [descricao, setDescricao] = useState(null);
 
     return (
-<<<<<<< HEAD
        <View>
         <SafeAreaView>
             <ScrollView>
@@ -92,7 +91,6 @@ export default function AdicionarPets({ navigation }) {
                     maxLength={400}
                     value={descricao}
                 />
-=======
         <View>
             <Text>Especie</Text>
 
@@ -139,7 +137,6 @@ export default function AdicionarPets({ navigation }) {
                 </View>
             </View>
         </View>
->>>>>>> 76f23fe12e9899f9d8fc72859f989493ecac0622
 
                 <TouchableOpacity>
                     <Text>Disponibilizar para Adoção</Text>
