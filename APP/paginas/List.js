@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-import { View, FlatList, Image, StatusBar, ImageBackground, Text } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { LinearGradient } from 'expo-linear-gradient';
-import { MaterialIcons } from '@expo/vector-icons';
-=======
+
 import { View, FlatList, Image, StatusBar, Text } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
->>>>>>> 76f23fe12e9899f9d8fc72859f989493ecac0622
 
 import { globalStyles } from '../styles/Global';
 
