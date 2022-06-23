@@ -13,7 +13,14 @@ const Stack = createNativeStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: true,
+          headerStyle: { backgroundColor: "#008584" },
+          headerShadowVisible: true,
+          headerTitleAlign: 'center',
+        }}
+      >
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="AdiciorPets" component={AdicionarPets} />
         <Stack.Screen name="AdotarPets" component={List} />
