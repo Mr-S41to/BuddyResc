@@ -1,13 +1,6 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-import { View, FlatList, Image, StatusBar, ImageBackground, Text } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { LinearGradient } from 'expo-linear-gradient';
-import { MaterialIcons } from '@expo/vector-icons';
-=======
 import { View, FlatList, Image, StatusBar, Text } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
->>>>>>> 76f23fe12e9899f9d8fc72859f989493ecac0622
 
 import { globalStyles } from '../styles/Global';
 
@@ -19,7 +12,6 @@ export default class List extends Component {
     this.state = {
       data: [],
       url: `https://buddyresc.herokuapp.com/pets/`,
-      sex: ""
     }
   }
 
@@ -34,7 +26,6 @@ export default class List extends Component {
             this.setState({
               data: res
             })
-            console.log(this.state.data);
           } else {
             this.setState({
               data: null
@@ -65,23 +56,14 @@ export default class List extends Component {
   render() {
     return (
 
-      <SafeAreaView style={{ backgroundColor: "white", flex: 1 }}>
+      <SafeAreaView style={globalStyles.safeArea}>
 
         <StatusBar barStyle='light-content' />
 
         {/* **********FlatList********* */}
 
         <FlatList
-          style={{
-            backgroundColor: "white",
-            top: 36,
-            width: '90%',
-            height: 260,
-            alignSelf: 'center',
-            borderRadius: 32,
-            marginLeft: 10,
-            marginRight: 10
-          }}
+          style={globalStyles.flatList}
 
           data={this.state.data}
           nestedScrollEnabled={true}
