@@ -23,7 +23,7 @@ export default function Home({navigation}){
           </TouchableOpacity>
           <TouchableOpacity
               style={globalStyles.cardHome}
-              onPress={() => console.log(navigation.navigate("AdotarPets"))}
+              onPress={() => console.log(navigation.navigate("AdicionarPets"))}
           >
             <Image
               style={globalStyles.inputImage}
@@ -37,7 +37,7 @@ export default function Home({navigation}){
         <View style={globalStyles.dadosView}>
           <TouchableOpacity
               style={globalStyles.cardHome}
-              onPress={() => console.log(navigation.navigate("AdotarPets"))}
+              onPress={() => console.log(navigation.navigate("AdicionarPets"))}
           >
             <Image
               style={globalStyles.inputImage}
